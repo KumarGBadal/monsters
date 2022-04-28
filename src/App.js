@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+const user = [{
+  fname:"Gaurav",
+  lname:"Kumar"
+},
+{
+  fname:"Nirbhay",
+  lname:"Kumar"
+}]
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+
+
+  let a = 10
+  let b = 20
+  return(
+    <div>
+      <h1>
+        Monster App
+      </h1>
+      <p>Building CRUD App</p>
+      <p>Some Calculation:{a*b}</p>
+      {
+        user.map(
+          function display(element, index){
+            return(
+              <div>
+                <p>{element.fname}</p>
+                <p>{element.lname}</p>
+              </div>
+            )
+          }
+        )
+       }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
+
+
